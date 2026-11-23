@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ikux_bow_charge": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "transitions": [
+            {
+              "charging": "q.main_hand_item_use_duration > 0"
+            }
+          ]
+        },
+        "charging": {
+          "animations": [
+            "charge_sound",
+            "charge_shake"
+          ],
+          "transitions": [
+            {
+              "idle": "q.main_hand_item_use_duration <= 0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

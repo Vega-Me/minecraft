@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:bow",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/attachables/inferno_breacher"
+      },
+      "geometry": {
+        "default": "geometry.ikux_laser_b"
+      },
+      "animations": {
+        "first_person": "animation.inferno_breacher.first_person",
+        "third_person": "animation.inferno_breacher.third_person",
+        "charge_ctrl": "controller.animation.ikux_bow_charge",
+        "charge_sound": "animation.inferno_breacher.charge_sound",
+        "charge_shake": "animation.inferno_breacher.charge_shake"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "first_person": "c.is_first_person"
+          },
+          {
+            "third_person": "!c.is_first_person"
+          },
+          "charge_ctrl"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ikux_weapon"
+      ],
+      "sound_effects": {
+        "energy_charge": "ikux.energy.charge"
+      }
+    }
+  }
+}

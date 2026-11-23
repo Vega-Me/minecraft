@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.player.ikux_greatsword_back": {
+      "geometry": "Geometry.ikux_greatsword_back",
+      "materials": [
+        {
+          "*": "Material.ikux_greatsword"
+        }
+      ],
+      "textures": [
+        "Texture.ikux_greatsword"
+      ]
+    }
+  }
+}

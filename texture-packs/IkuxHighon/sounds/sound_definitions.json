@@ -1,0 +1,110 @@
+{
+  "format_version": "1.20.20",
+  "sound_definitions": {
+    "crossbow.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ikux/sniper_shot1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ikux/sniper_shot2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ikux/sniper_shot3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "crossbow.loading.start": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ikux/crossbow_load_start",
+          "volume": 0.8,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "crossbow.loading.middle": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ikux/crossbow_load_middle",
+          "volume": 0.8,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "crossbow.loading.end": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ikux/crossbow_load_end",
+          "volume": 0.9,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "crossbow.quick_charge.start": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ikux/crossbow_load_start",
+          "volume": 0.8,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "crossbow.quick_charge.middle": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ikux/crossbow_load_middle",
+          "volume": 0.8,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "crossbow.quick_charge.end": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ikux/crossbow_load_end",
+          "volume": 0.9,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "random.bow": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ikux/energy_shot1",
+          "volume": 0.9,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ikux/energy_shot2",
+          "volume": 0.9,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ikux.energy.charge": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/ikux/energy_charge",
+          "volume": 0.7,
+          "load_on_low_memory": true
+        }
+      ]
+    }
+  }
+}
