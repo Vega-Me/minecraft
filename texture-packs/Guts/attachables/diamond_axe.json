@@ -1,0 +1,34 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:diamond_axe",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/attachables/guts_diamond_axe"
+      },
+      "geometry": {
+        "default": "geometry.guts_diamond_axe"
+      },
+      "animations": {
+        "first_person": "animation.guts_diamond_axe.first_person",
+        "third_person": "animation.guts_diamond_axe.third_person"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "first_person": "c.is_first_person"
+          },
+          {
+            "third_person": "!c.is_first_person"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ikux_weapon"
+      ]
+    }
+  }
+}
