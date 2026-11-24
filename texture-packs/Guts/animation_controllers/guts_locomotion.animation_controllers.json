@@ -1,0 +1,86 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.guts_locomotion.arms": {
+      "initial_state": "vanilla",
+      "states": {
+        "vanilla": {
+          "animations": [
+            "guts_locomotion_arms_vanilla"
+          ],
+          "blend_transition": 0.12,
+          "transitions": [
+            {
+              "ported": "variable.guts_locomotion_active"
+            }
+          ]
+        },
+        "ported": {
+          "animations": [
+            "guts_locomotion_arms_ported"
+          ],
+          "blend_transition": 0.12,
+          "transitions": [
+            {
+              "vanilla": "!variable.guts_locomotion_active"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.guts_locomotion.legs": {
+      "initial_state": "vanilla",
+      "states": {
+        "vanilla": {
+          "animations": [
+            "guts_locomotion_legs_vanilla"
+          ],
+          "blend_transition": 0.12,
+          "transitions": [
+            {
+              "ported": "variable.guts_locomotion_active"
+            }
+          ]
+        },
+        "ported": {
+          "animations": [
+            "guts_locomotion_legs_ported"
+          ],
+          "blend_transition": 0.12,
+          "transitions": [
+            {
+              "vanilla": "!variable.guts_locomotion_active"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.guts_locomotion.torso": {
+      "initial_state": "vanilla",
+      "states": {
+        "vanilla": {
+          "animations": [
+            "guts_locomotion_torso_vanilla"
+          ],
+          "blend_transition": 0.12,
+          "transitions": [
+            {
+              "ported": "variable.guts_locomotion_active"
+            }
+          ]
+        },
+        "ported": {
+          "animations": [
+            "guts_locomotion_torso_ported"
+          ],
+          "blend_transition": 0.12,
+          "transitions": [
+            {
+              "vanilla": "!variable.guts_locomotion_active"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

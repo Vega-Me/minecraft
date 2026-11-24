@@ -1,13 +1,13 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Guts (based on a pack by Soulless | packsmc.com)",
-    "name": "Guts",
-    "uuid": "b95b6a85-a261-44c1-b9b9-53dd9f2b26bc",
+    "description": "Guts (based on Soulless | packsmc.com). Walking/sprinting test adapted from Actions & Stuff 1.0.2.",
+    "name": "Guts - Locomotion Test",
+    "uuid": "b179b0c2-93f3-57b9-abf5-999f9b70a383",
     "version": [
       1,
       0,
-      0
+      1
     ],
     "min_engine_version": [
       1,
@@ -19,11 +19,11 @@
     {
       "description": "Guts",
       "type": "resources",
-      "uuid": "cdb1e5f0-392d-495f-84c2-0b1b67cf15e2",
+      "uuid": "d2b71846-ce9c-5cae-8dd7-598311cb0f39",
       "version": [
         1,
         0,
-        0
+        1
       ]
     }
   ],

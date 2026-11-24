@@ -1,0 +1,498 @@
+{
+  "scope": "Offline static verification only; no real engine tests performed or certified.",
+  "passed": true,
+  "checks": [
+    {
+      "name": "JSON syntax and duplicate keys",
+      "passed": true,
+      "details": [
+        "texture-packs/Guts/entity/player.entity.json",
+        "texture-packs/Guts/manifest.json",
+        "texture-packs/Guts/animations/guts_locomotion.animation.json",
+        "texture-packs/Guts/animation_controllers/guts_locomotion.animation_controllers.json"
+      ]
+    },
+    {
+      "name": "Aliases, unique IDs, restricted routes and no effects",
+      "passed": true,
+      "details": {
+        "reachable_clips": [
+          "animation.guts_locomotion.arms",
+          "animation.guts_locomotion.legs",
+          "animation.guts_locomotion.torso"
+        ],
+        "unique_definition_count": 19
+      }
+    },
+    {
+      "name": "Gate truth table and outgoing hard blend exclusions",
+      "passed": true,
+      "details": {
+        "gate": "!variable.is_first_person && !variable.is_paperdoll && !variable.map_face_icon && !query.is_spectator && query.is_alive && query.is_on_ground && !query.is_sneaking && !query.is_swimming && !query.is_gliding && !query.is_crawling && !query.is_riding && variable.swim_amount <= 0.0 && !query.item_is_charged && !query.is_sleeping && !query.is_emoting && !query.blocking && !query.is_charging && query.main_hand_item_use_duration <= 0.0 && variable.attack_time <= 0.0 && query.modified_move_speed > 0.01",
+        "cases": [
+          {
+            "sprinting": false,
+            "case": "walking",
+            "active": true,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.2,
+              "animation.guts_locomotion.legs": 0.2,
+              "animation.guts_locomotion.torso": 0.2
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "first_person",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "paperdoll",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "map",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "dead",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "spectator",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "airborne",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "sneak",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "swim",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "swimfade",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "glide",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "crawl",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "riding",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "sleep",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "emote",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "attack",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "blocking",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "using",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "charging",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "charged_crossbow",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": false,
+            "case": "stationary",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "sprinting",
+            "active": true,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.2,
+              "animation.guts_locomotion.legs": 0.2,
+              "animation.guts_locomotion.torso": 0.2
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "first_person",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "paperdoll",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "map",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "dead",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "spectator",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "airborne",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "sneak",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "swim",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "swimfade",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "glide",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "crawl",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "riding",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "sleep",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "emote",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "attack",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "blocking",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "using",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "charging",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "charged_crossbow",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          },
+          {
+            "sprinting": true,
+            "case": "stationary",
+            "active": false,
+            "blend_weights": {
+              "animation.guts_locomotion.arms": 0.0,
+              "animation.guts_locomotion.legs": 0.0,
+              "animation.guts_locomotion.torso": 0.0
+            }
+          }
+        ],
+        "outgoing_clip_retained_current_frame_gate": true
+      }
+    },
+    {
+      "name": "Reference bones, finite sampled motion, shared phase and loop continuity",
+      "passed": true,
+      "details": {
+        "animated_bones": [
+          "body",
+          "leftArm",
+          "leftLeg",
+          "rightArm",
+          "rightLeg",
+          "waist"
+        ],
+        "finite_samples": 364,
+        "fps_compared": [
+          30,
+          60
+        ],
+        "max_loop_channel_delta": 0.018562674355328213,
+        "clip_sha256": "8494082e537688a057752cecd727d2e248217a77bfe335794263c2b73659f840",
+        "engine_equivalence": false
+      }
+    },
+    {
+      "name": "Existing player behavior retained outside three routes and new variables",
+      "passed": true,
+      "details": "All original scripts, first-person/combat aliases, skin/render bindings and back-sword logic preserved."
+    },
+    {
+      "name": "Protected files, original baseline and archived manifest UUIDs",
+      "passed": true,
+      "details": {
+        "unchanged_tracked_assets": 1150,
+        "base_commit": "fe8113c78ac1ba12157ab81d70088d434fbb8621",
+        "archived_root_manifest_checked": true,
+        "test_uuids": [
+          "b179b0c2-93f3-57b9-abf5-999f9b70a383",
+          "d2b71846-ce9c-5cae-8dd7-598311cb0f39"
+        ]
+      }
+    }
+  ]
+}
