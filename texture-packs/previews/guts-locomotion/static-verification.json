@@ -493,6 +493,15 @@
           "d2b71846-ce9c-5cae-8dd7-598311cb0f39"
         ]
       }
+    },
+    {
+      "name": "Installable archive matches all source files",
+      "passed": true,
+      "details": {
+        "file_count": 1154,
+        "root_manifest": true,
+        "sha256": "7a1973d82a2cc7656b2ce3b60b1a518c397e3365689cb7fb5edf323440552d1b"
+      }
     }
   ]
 }
